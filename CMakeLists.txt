@@ -43,5 +43,5 @@ target_link_libraries(mbed-mqtt
     INTERFACE
         mbed-os
         mbed-netsocket
-        mbed-greentea
+        #mbed-greentea
 )
