@@ -22,7 +22,7 @@
 extern "C" {
 #endif
 
-enum errors
+enum MQTTSNPACKET_errors
 {
 	MQTTSNPACKET_BUFFER_TOO_SHORT = -2,
 	MQTTSNPACKET_READ_ERROR = -1,

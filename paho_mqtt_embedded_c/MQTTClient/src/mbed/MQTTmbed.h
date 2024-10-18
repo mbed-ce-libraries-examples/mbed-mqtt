@@ -58,7 +58,7 @@ public:
     }
 
 private:
-    Timer t;
+    LowPowerTimer  t;
     unsigned long interval_end_ms;
 };
 

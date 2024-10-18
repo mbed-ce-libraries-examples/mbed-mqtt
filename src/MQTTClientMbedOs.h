@@ -22,7 +22,7 @@
 #include <TLSSocket.h>
 #include <DTLSSocket.h>
 #include <UDPSocket.h>
-#include "unity/unity.h"
+//#include "unity/unity.h"
 
 #include "FP.h"
 #include <MQTTPacket.h>
@@ -226,7 +226,7 @@ public:
     /** Set the default message handling callback - used for any message which does not match a subscription message handler
      *  @param mh - pointer to the callback function.  Set to 0 to remove.
      */
-    void setDefaultMessageHandler(messageHandler mh);
+    nsapi_error_t setDefaultMessageHandler(messageHandler mh);
 
     /** Set a message handling callback.  This can be used outside of the the subscribe method.
      *  @param topicFilter - a topic pattern which can include wildcards
