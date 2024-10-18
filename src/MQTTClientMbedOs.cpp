@@ -188,12 +188,15 @@ bool MQTTClient::isConnected()
     }
 }
 
-void MQTTClient::setDefaultMessageHandler(messageHandler mh)
+nsapi_error_t MQTTClient::setDefaultMessageHandler(messageHandler mh)//SN handler typo fix uncovered a type mismatch, used the format of setMessageHandler for now
 {
-    if (client != NULL) {
+    if (clientSN != NULL) {
+        return NSAPI_ERROR_UNSUPPORTED;
+    } else if (client == NULL) {
+        return NSAPI_ERROR_NO_CONNECTION;
+    } else {
         client->setDefaultMessageHandler(mh);
-    } else if (clientSN != NULL) {
-        clientSN->setDefaultMessageHandler(mh);
+        return NSAPI_ERROR_OK;
     }
 }
 

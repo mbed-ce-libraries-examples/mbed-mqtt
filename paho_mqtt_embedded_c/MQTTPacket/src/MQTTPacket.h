@@ -33,7 +33,7 @@ extern "C" {
   #define DLLExport  
 #endif
 
-enum errors
+enum MQTTPACKET_errors
 {
 	MQTTPACKET_BUFFER_TOO_SHORT = -2,
 	MQTTPACKET_READ_ERROR = -1,
